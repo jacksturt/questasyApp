@@ -14,6 +14,7 @@ export const WEEK_15_GAME_IDS = [
   "7f4a2ce0-6d10-46a1-8cb5-09bae643e9d7",
   "96053ae2-93e8-41d6-bdab-0d1c27eacbcb",
   "adac5637-60ed-446c-ac7f-df47c122c46f",
+  "322508eb-5e6c-42d1-b91e-c08535bcf245",
 ];
 
 export const ABBREVIATION_TO_TEAM_NAME: {

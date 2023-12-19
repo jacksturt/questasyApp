@@ -10,10 +10,11 @@ import path from "path";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { WEEK_15_GAME_IDS } from "@/constants";
+import { cacheFunctionWithTimeout } from "@/helpers/caching";
 const SPORTSRADAR_API_BASE =
   "https://api.sportradar.us/nfl/official/trial/v7/en";
 const SPORTSRADAR_API_KEY = "atc9c9phveefwywzvukjs8u9";
-export const GAME_ID = "f7ea44fb-336b-4b4e-a369-70f9ef56174d";
+export const GAME_ID = "322508eb-5e6c-42d1-b91e-c08535bcf245";
 
 export const getGame = async (id: string): Promise<SRGameData> => {
   try {
@@ -29,22 +30,28 @@ export const getGame = async (id: string): Promise<SRGameData> => {
     // Send the data as a JSON response
     return jsonData;
   } catch (error) {
-    // console.log("data from web");
+    const cachedFunction = cacheFunctionWithTimeout(getGameAPI, 60000); // Cache for 1 minute
 
-    const url = `${SPORTSRADAR_API_BASE}/games/${id}/statistics.json?api_key=${SPORTSRADAR_API_KEY}`;
-
-    const result = await axios.get(url);
-    const data = result.data;
-    if (data.status === "closed") {
-      const filePath = path.join(process.cwd(), `src/data/${id}.json`);
-      // Convert the data to a JSON string
-      const jsonData = JSON.stringify(data, null, 2);
-
-      // Write the data to the file
-      fs.writeFileSync(filePath, jsonData, "utf-8");
-    }
+    const data = await cachedFunction(id);
+    // console.log(data);
     return data;
   }
+};
+
+const getGameAPI = async (id: string): Promise<SRGameData> => {
+  const url = `${SPORTSRADAR_API_BASE}/games/${id}/statistics.json?api_key=${SPORTSRADAR_API_KEY}`;
+
+  const result = await axios.get(url);
+  const data = result.data;
+  if (data.status === "closed") {
+    const filePath = path.join(process.cwd(), `src/data/${id}.json`);
+    // Convert the data to a JSON string
+    const jsonData = JSON.stringify(data, null, 2);
+
+    // Write the data to the file
+    fs.writeFileSync(filePath, jsonData, "utf-8");
+  }
+  return data;
 };
 
 export default async function handler(
@@ -53,11 +60,14 @@ export default async function handler(
 ) {
   try {
     let gamesData = {};
-    await WEEK_15_GAME_IDS.forEach(async (game) => {
-      const data = await getGame(game);
-      const converted = convertGameStats(data);
-      gamesData = { ...gamesData, ...converted };
+    const getGamesMap = WEEK_15_GAME_IDS.map(async (game) => {
+      {
+        const data = await getGame(game);
+        const converted = convertGameStats(data);
+        gamesData = { ...gamesData, ...converted };
+      }
     });
+    await Promise.all(getGamesMap);
     res.status(200).json(gamesData);
   } catch (error: any) {
     res.status(500).json({ error: error.message });

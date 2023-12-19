@@ -133,6 +133,7 @@ export const convertTeamStats = (teamStats: SRTeamFullStats): PlayerData => {
 
 export const convertGameStats = (gameStats: SRGameData): PlayerData => {
   const homeTeamPlayers = convertTeamStats(gameStats.statistics.home);
+  //   console.log(homeTeamPlayers);
   const awayTeamPlayers = convertTeamStats(gameStats.statistics.away);
   const teams: PlayerData = { ...homeTeamPlayers, ...awayTeamPlayers };
 

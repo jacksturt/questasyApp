@@ -11,7 +11,7 @@ import path from "path";
 const SPORTSRADAR_API_BASE =
   "https://api.sportradar.us/nfl/official/trial/v7/en";
 const SPORTSRADAR_API_KEY = "atc9c9phveefwywzvukjs8u9";
-export const GAME_ID = "f7ea44fb-336b-4b4e-a369-70f9ef56174d";
+export const GAME_ID = "322508eb-5e6c-42d1-b91e-c08535bcf245";
 
 export const getGame = async (id: string): Promise<SRGameData> => {
   try {
@@ -23,7 +23,6 @@ export const getGame = async (id: string): Promise<SRGameData> => {
 
     // Parse the file contents (assuming it's JSON)
     const jsonData = JSON.parse(fileData);
-    console.log("data from file");
     // Send the data as a JSON response
     return jsonData;
   } catch (error) {

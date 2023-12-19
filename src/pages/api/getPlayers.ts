@@ -17,7 +17,6 @@ export const getPlayers = async (): Promise<SleeperPlayersMap> => {
 
     // Parse the file contents (assuming it's JSON)
     const jsonData = JSON.parse(fileData);
-    console.log("data from file", fileData[5859]);
     // Send the data as a JSON response
     return jsonData;
   } catch (error) {
