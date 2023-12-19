@@ -1,8 +1,11 @@
+import { LEAGUE_1_OFFSET, LEAGUE_3_OFFSET } from "@/constants/native";
+import { LEAGUE_1_ID, LEAGUE_2_ID, LEAGUE_3_ID } from "@/constants/sleeper";
 import {
   AllPlayerTypes,
   DefenseStats,
   KickerStats,
   PlayerStats,
+  RosterInfo,
 } from "@/types/native";
 
 export const pointsAllowedConversion = (points: number): number => {
@@ -73,4 +76,23 @@ export const getPointsForPlayer = (player: AllPlayerTypes): number => {
     default:
       return getPointsForSkillPosition(player as PlayerStats);
   }
+};
+
+const getOffsetForLeague = (leagueId: string): number => {
+  if (leagueId === LEAGUE_1_ID) return LEAGUE_1_OFFSET;
+  if (leagueId === LEAGUE_2_ID) return 0;
+  if (leagueId === LEAGUE_3_ID) return LEAGUE_3_OFFSET;
+  return 0;
+};
+
+export const calculateOffsetForMatchup = (
+  roster1: RosterInfo,
+  roster2: RosterInfo
+): number => {
+  let sum = 0;
+
+  sum += getOffsetForLeague(roster1.leagueId);
+  sum -= getOffsetForLeague(roster2.leagueId);
+
+  return sum;
 };

@@ -1,14 +1,17 @@
 "use client";
 import { getRosters, getUsers } from "@/api/sleeper";
 import { PlayerSection } from "@/components/playerSection";
-import { ABBREVIATION_TO_TEAM_NAME } from "@/contants";
+import { ABBREVIATION_TO_TEAM_NAME } from "@/constants";
 import {
   ALL_LEAGUES,
   WEEK_15_MAPPINGS,
   WEEK_15_TEAMS,
-} from "@/contants/sleeper";
+} from "@/constants/sleeper";
 import { PlayerData } from "@/helpers/dataConversion";
-import { getPointsForPlayer } from "@/helpers/pointsCalculation";
+import {
+  calculateOffsetForMatchup,
+  getPointsForPlayer,
+} from "@/helpers/pointsCalculation";
 import {
   AllPlayerTypes,
   Matchup,
@@ -104,6 +107,7 @@ export default function Home() {
       const rosterData = {
         id: roster.roster_id,
         owner: roster.owner_id,
+        leagueId: roster.league_id,
         teamName: user?.metadata.team_name || "Team " + user?.display_name,
         avatar: "https://sleepercdn.com/avatars/thumbs/" + user?.avatar,
         starters: roster.starters.map((player) => {
@@ -147,6 +151,12 @@ export default function Home() {
     }
     console.log(matchups);
     setRosters(rosters);
+    matchups.forEach((matchup) => {
+      matchup.away!.totalPoints = (
+        parseFloat(matchup.away!.totalPoints) +
+        calculateOffsetForMatchup(matchup.away!, matchup.home!)
+      ).toFixed(2);
+    });
     setMatchups(matchups);
   }, [playersData, playerIdMap, rawRosters, rawUsers]);
 

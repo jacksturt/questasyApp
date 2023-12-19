@@ -65,6 +65,7 @@ export type RosterInfo = {
   avatar: string;
   starters: AllPlayerTypes[];
   totalPoints: string;
+  leagueId: string;
   //   bench: AllPlayerTypes[];
 };
 

@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import { WEEK_15_GAME_IDS } from "@/contants";
+import { WEEK_15_GAME_IDS } from "@/constants";
 const SPORTSRADAR_API_BASE =
   "https://api.sportradar.us/nfl/official/trial/v7/en";
 const SPORTSRADAR_API_KEY = "atc9c9phveefwywzvukjs8u9";
