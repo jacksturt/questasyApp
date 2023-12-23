@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import { WEEK_15_GAME_IDS } from "@/constants";
+import { WEEK_15_GAME_IDS, WEEK_16_GAME_IDS } from "@/constants";
 import { cacheFunctionWithTimeout } from "@/helpers/caching";
 const SPORTSRADAR_API_BASE =
   "https://api.sportradar.us/nfl/official/trial/v7/en";
@@ -43,7 +43,7 @@ const getGameAPI = async (id: string): Promise<SRGameData> => {
 
   const result = await axios.get(url);
   const data = result.data;
-  if (data.status === "closed") {
+  if (data.status === "closed" && process.env.IS_VERCEL !== "true") {
     const filePath = path.join(process.cwd(), `src/data/${id}.json`);
     // Convert the data to a JSON string
     const jsonData = JSON.stringify(data, null, 2);
@@ -60,7 +60,7 @@ export default async function handler(
 ) {
   try {
     let gamesData = {};
-    const getGamesMap = WEEK_15_GAME_IDS.map(async (game) => {
+    const getGamesMap = WEEK_16_GAME_IDS.map(async (game) => {
       {
         const data = await getGame(game);
         const converted = convertGameStats(data);

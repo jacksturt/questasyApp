@@ -1,0 +1,761 @@
+{
+    "id": "a538d200-e916-4272-aa07-b486094a1668",
+    "year": 2023,
+    "type": "REG",
+    "name": "REG",
+    "week": {
+        "id": "248dff07-03d6-46d2-a2c1-06d517cef39a",
+        "sequence": 16,
+        "title": "16",
+        "games": [
+            {
+                "id": "a5c8ad6c-fadd-4c57-89d3-c3166f20ff87",
+                "status": "closed",
+                "scheduled": "2023-12-22T01:15:00+00:00",
+                "attendance": 73228,
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209595",
+                "game_type": "regular",
+                "conference_game": true,
+                "duration": "2:52",
+                "venue": {
+                    "id": "790c1f04-73c6-4f6f-8b1e-78a62260be90",
+                    "name": "SoFi Stadium",
+                    "city": "Inglewood",
+                    "state": "CA",
+                    "country": "USA",
+                    "zip": "90301",
+                    "address": "1000 S Prairie Ave",
+                    "capacity": 70240,
+                    "surface": "artificial",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:52183",
+                    "location": {
+                        "lat": "33.953536",
+                        "lng": "-118.338734"
+                    }
+                },
+                "home": {
+                    "id": "2eff2a03-54d4-46ba-890e-2bc3925548f3",
+                    "name": "Los Angeles Rams",
+                    "alias": "LA",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4387"
+                },
+                "away": {
+                    "id": "0d855753-ea21-4953-89f9-0e20aff9eb73",
+                    "name": "New Orleans Saints",
+                    "alias": "NO",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4425"
+                },
+                "broadcast": {
+                    "network": "Amazon Prime Video"
+                },
+                "weather": {
+                    "condition": "Cloudy",
+                    "humidity": 85,
+                    "temp": 63,
+                    "wind": {
+                        "speed": 3,
+                        "direction": "ESE"
+                    }
+                },
+                "scoring": {
+                    "home_points": 30,
+                    "away_points": 22,
+                    "periods": [
+                        {
+                            "period_type": "quarter",
+                            "id": "01a5dab6-9455-4854-a174-91035e983861",
+                            "number": 1,
+                            "sequence": 1,
+                            "home_points": 7,
+                            "away_points": 0
+                        },
+                        {
+                            "period_type": "quarter",
+                            "id": "294e8431-e690-4e49-ade7-2e688a53a667",
+                            "number": 2,
+                            "sequence": 2,
+                            "home_points": 10,
+                            "away_points": 7
+                        },
+                        {
+                            "period_type": "quarter",
+                            "id": "943eb14c-0f4c-4f4b-9750-a8539c0708c5",
+                            "number": 3,
+                            "sequence": 3,
+                            "home_points": 10,
+                            "away_points": 0
+                        },
+                        {
+                            "period_type": "quarter",
+                            "id": "a30e3e55-02b3-4786-9ee1-6814a10164cb",
+                            "number": 4,
+                            "sequence": 4,
+                            "home_points": 3,
+                            "away_points": 15
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "389ffb68-0764-4e36-81a3-fb23055c6c32",
+                "status": "created",
+                "scheduled": "2023-12-23T21:30:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209597",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "7349a2e6-0ac9-410b-8bd2-ca58c9f7aa34",
+                    "name": "Acrisure Stadium",
+                    "city": "Pittsburgh",
+                    "state": "PA",
+                    "country": "USA",
+                    "zip": "15212",
+                    "address": "100 Art Rooney Avenue",
+                    "capacity": 68400,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8197",
+                    "location": {
+                        "lat": "40.446653",
+                        "lng": "-80.015844"
+                    }
+                },
+                "home": {
+                    "id": "cb2f9f1f-ac67-424e-9e72-1475cb0ed398",
+                    "name": "Pittsburgh Steelers",
+                    "alias": "PIT",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4345"
+                },
+                "away": {
+                    "id": "ad4ae08f-d808-42d5-a1e6-e9bc4e34d123",
+                    "name": "Cincinnati Bengals",
+                    "alias": "CIN",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4416"
+                },
+                "broadcast": {
+                    "network": "NBC"
+                },
+                "weather": {
+                    "condition": "Overcast",
+                    "humidity": 49,
+                    "temp": 45,
+                    "wind": {
+                        "speed": 6,
+                        "direction": "S"
+                    }
+                }
+            },
+            {
+                "id": "fd64785d-5a73-4a12-8ca7-6ffe8233cf2b",
+                "status": "created",
+                "scheduled": "2023-12-24T01:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209599",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "790c1f04-73c6-4f6f-8b1e-78a62260be90",
+                    "name": "SoFi Stadium",
+                    "city": "Inglewood",
+                    "state": "CA",
+                    "country": "USA",
+                    "zip": "90301",
+                    "address": "1000 S Prairie Ave",
+                    "capacity": 70240,
+                    "surface": "artificial",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:52183",
+                    "location": {
+                        "lat": "33.953536",
+                        "lng": "-118.338734"
+                    }
+                },
+                "home": {
+                    "id": "1f6dcffb-9823-43cd-9ff4-e7a8466749b5",
+                    "name": "Los Angeles Chargers",
+                    "alias": "LAC",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4429"
+                },
+                "away": {
+                    "id": "768c92aa-75ff-4a43-bcc0-f2798c2e1724",
+                    "name": "Buffalo Bills",
+                    "alias": "BUF",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4376"
+                },
+                "broadcast": {
+                    "network": "Peacock"
+                }
+            },
+            {
+                "id": "19a88df4-b884-496a-b581-078de5c163c7",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209611",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "5295c1b7-c85c-49cb-9569-1707c65324e5",
+                    "name": "Nissan Stadium",
+                    "city": "Nashville",
+                    "state": "TN",
+                    "country": "USA",
+                    "zip": "37213",
+                    "address": "One Titans Way",
+                    "capacity": 69143,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8207",
+                    "location": {
+                        "lat": "36.166367",
+                        "lng": "-86.771223"
+                    }
+                },
+                "home": {
+                    "id": "d26a1ca5-722d-4274-8f97-c92e49c96315",
+                    "name": "Tennessee Titans",
+                    "alias": "TEN",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:367364"
+                },
+                "away": {
+                    "id": "3d08af9e-c767-4f88-a7dc-b920c6d2b4a8",
+                    "name": "Seattle Seahawks",
+                    "alias": "SEA",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4430"
+                },
+                "broadcast": {
+                    "network": "CBS"
+                }
+            },
+            {
+                "id": "42375c35-091a-4e0b-9b8d-fe07ef05cdcd",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209601",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "1f2d393b-2291-4835-a412-0714966ea245",
+                    "name": "Mercedes-Benz Stadium",
+                    "city": "Atlanta",
+                    "state": "GA",
+                    "country": "USA",
+                    "zip": "30313",
+                    "address": "441 Martin Luther King Jr Drive NW",
+                    "capacity": 71000,
+                    "surface": "artificial",
+                    "roof_type": "retractable_dome",
+                    "sr_id": "sr:venue:20343",
+                    "location": {
+                        "lat": "33.757368",
+                        "lng": "-84.401008"
+                    }
+                },
+                "home": {
+                    "id": "e6aa13a4-0055-48a9-bc41-be28dc106929",
+                    "name": "Atlanta Falcons",
+                    "alias": "ATL",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4393"
+                },
+                "away": {
+                    "id": "82cf9565-6eb9-4f01-bdbd-5aa0d472fcd9",
+                    "name": "Indianapolis Colts",
+                    "alias": "IND",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4421"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "6d4d690d-a763-40c3-91e9-48d298018c9a",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209605",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "6a72e5ca-33d0-40af-8e6b-b32a4d3d9346",
+                    "name": "NRG Stadium",
+                    "city": "Houston",
+                    "state": "TX",
+                    "country": "USA",
+                    "zip": "77054",
+                    "address": "One Reliant Park",
+                    "capacity": 72220,
+                    "surface": "artificial",
+                    "roof_type": "retractable_dome",
+                    "sr_id": "sr:venue:2402",
+                    "location": {
+                        "lat": "29.684735",
+                        "lng": "-95.410725"
+                    }
+                },
+                "home": {
+                    "id": "82d2d380-3834-4938-835f-aec541e5ece7",
+                    "name": "Houston Texans",
+                    "alias": "HOU",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4324"
+                },
+                "away": {
+                    "id": "d5a2eb42-8065-4174-ab79-0a6fa820e35e",
+                    "name": "Cleveland Browns",
+                    "alias": "CLE",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4417"
+                },
+                "broadcast": {
+                    "network": "CBS"
+                }
+            },
+            {
+                "id": "945e166e-44da-4fb4-b3b3-575b0ca24e7c",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209603",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "39be9ed4-3292-49ac-8699-a381de3a4969",
+                    "name": "Bank of America Stadium",
+                    "city": "Charlotte",
+                    "state": "NC",
+                    "country": "USA",
+                    "zip": "28202",
+                    "address": "800 South Mint Street",
+                    "capacity": 74867,
+                    "surface": "artificial",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8173",
+                    "location": {
+                        "lat": "35.225937",
+                        "lng": "-80.853133"
+                    }
+                },
+                "home": {
+                    "id": "f14bf5cc-9a82-4a38-bc15-d39f75ed5314",
+                    "name": "Carolina Panthers",
+                    "alias": "CAR",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4415"
+                },
+                "away": {
+                    "id": "a20471b4-a8d9-40c7-95ad-90cc30e46932",
+                    "name": "Green Bay Packers",
+                    "alias": "GB",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4420"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "aed5b2ec-ff34-419b-b159-fabab8a6cc73",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209609",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "5d4c85c7-d84e-4e10-bd6a-8a15ebecca5c",
+                    "name": "MetLife Stadium",
+                    "city": "East Rutherford",
+                    "state": "NJ",
+                    "country": "USA",
+                    "zip": "07073",
+                    "address": "One MetLife Stadium Drive",
+                    "capacity": 82500,
+                    "surface": "artificial",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:1981",
+                    "location": {
+                        "lat": "40.813611",
+                        "lng": "-74.074444"
+                    }
+                },
+                "home": {
+                    "id": "5fee86ae-74ab-4bdd-8416-42a9dd9964f3",
+                    "name": "New York Jets",
+                    "alias": "NYJ",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4427"
+                },
+                "away": {
+                    "id": "22052ff7-c065-42ee-bc8f-c4691c50e624",
+                    "name": "Washington Commanders",
+                    "alias": "WAS",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4432"
+                },
+                "broadcast": {
+                    "network": "CBS"
+                }
+            },
+            {
+                "id": "c2dcdbbd-3de4-4b79-9b1c-401a21f7063e",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209607",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "f5ff00d4-1ed8-4918-bf73-13d66d510f98",
+                    "name": "U.S. Bank Stadium",
+                    "city": "Minneapolis",
+                    "state": "MN",
+                    "country": "USA",
+                    "zip": "55415",
+                    "address": "900 S 5th Street",
+                    "capacity": 66655,
+                    "surface": "artificial",
+                    "roof_type": "dome",
+                    "sr_id": "sr:venue:18423",
+                    "location": {
+                        "lat": "44.973686",
+                        "lng": "-93.257458"
+                    }
+                },
+                "home": {
+                    "id": "33405046-04ee-4058-a950-d606f8c30852",
+                    "name": "Minnesota Vikings",
+                    "alias": "MIN",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4423"
+                },
+                "away": {
+                    "id": "c5a59daa-53a7-4de0-851f-fb12be893e9e",
+                    "name": "Detroit Lions",
+                    "alias": "DET",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4419"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "bf34bf3a-0af6-498f-b11e-10e789b18826",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T21:05:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209613",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "6fccc39c-80bc-4c81-83d9-2d5a848c8c09",
+                    "name": "Raymond James Stadium",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "country": "USA",
+                    "zip": "33607",
+                    "address": "4201 North Dale Mabry Highway",
+                    "capacity": 69218,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8205",
+                    "location": {
+                        "lat": "27.976211",
+                        "lng": "-82.503625"
+                    }
+                },
+                "home": {
+                    "id": "4254d319-1bc7-4f81-b4ab-b5e6f3402b69",
+                    "name": "Tampa Bay Buccaneers",
+                    "alias": "TB",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4388"
+                },
+                "away": {
+                    "id": "f7ddd7fa-0bae-4f90-bc8e-669e4d6cf2de",
+                    "name": "Jacksonville Jaguars",
+                    "alias": "JAC",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4386"
+                },
+                "broadcast": {
+                    "network": "CBS"
+                }
+            },
+            {
+                "id": "2aaece03-c4c4-4c07-9835-3c523cec2925",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T21:25:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209615",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "d7866605-5ac6-4b3a-90e8-760cc5a26b75",
+                    "name": "Soldier Field",
+                    "city": "Chicago",
+                    "state": "IL",
+                    "country": "USA",
+                    "zip": "60605",
+                    "address": "1410 South Museum Campus Drive",
+                    "capacity": 61500,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:2109",
+                    "location": {
+                        "lat": "41.862498",
+                        "lng": "-87.616979"
+                    }
+                },
+                "home": {
+                    "id": "7b112545-38e6-483c-a55c-96cf6ee49cb8",
+                    "name": "Chicago Bears",
+                    "alias": "CHI",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4391"
+                },
+                "away": {
+                    "id": "de760528-1dc0-416a-a978-b510d20692ff",
+                    "name": "Arizona Cardinals",
+                    "alias": "ARI",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4412"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "36659169-5373-4de0-80ca-06ac24c283a6",
+                "status": "scheduled",
+                "scheduled": "2023-12-24T21:25:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209617",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "50a5c833-1570-4c38-abc7-7914cf87dbde",
+                    "name": "Hard Rock Stadium",
+                    "city": "Miami Gardens",
+                    "state": "FL",
+                    "country": "USA",
+                    "zip": "33056",
+                    "address": "2269 Northwest 199th Street",
+                    "capacity": 65326,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:21306",
+                    "location": {
+                        "lat": "25.958025",
+                        "lng": "-80.238724"
+                    }
+                },
+                "home": {
+                    "id": "4809ecb0-abd3-451d-9c4a-92a90b83ca06",
+                    "name": "Miami Dolphins",
+                    "alias": "MIA",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4287"
+                },
+                "away": {
+                    "id": "e627eec7-bbae-4fa4-8e73-8e1d6bc5c060",
+                    "name": "Dallas Cowboys",
+                    "alias": "DAL",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4392"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "7ad5a64d-1613-4dfe-bf15-59868304f1de",
+                "status": "scheduled",
+                "scheduled": "2023-12-25T01:15:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209619",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "6589e61d-ef1e-4e30-91b5-9acd2072b8a0",
+                    "name": "Empower Field at Mile High",
+                    "city": "Denver",
+                    "state": "CO",
+                    "country": "USA",
+                    "zip": "80204",
+                    "address": "1701 Mile High Stadium Circle",
+                    "capacity": 76125,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8179",
+                    "location": {
+                        "lat": "39.743865",
+                        "lng": "-105.020158"
+                    }
+                },
+                "home": {
+                    "id": "ce92bd47-93d5-4fe9-ada4-0fc681e6caa0",
+                    "name": "Denver Broncos",
+                    "alias": "DEN",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4418"
+                },
+                "away": {
+                    "id": "97354895-8c77-4fd4-a860-32e62ea7382a",
+                    "name": "New England Patriots",
+                    "alias": "NE",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4424"
+                },
+                "broadcast": {
+                    "network": "NFL Network",
+                    "satellite": "212"
+                }
+            },
+            {
+                "id": "ced4e00a-4097-4394-8541-091bd7e86498",
+                "status": "scheduled",
+                "scheduled": "2023-12-25T18:00:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41205257",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "2ec4c411-dac2-403d-b091-6b6aa4a0a914",
+                    "name": "GEHA Field at Arrowhead Stadium",
+                    "city": "Kansas City",
+                    "state": "MO",
+                    "country": "USA",
+                    "zip": "64129",
+                    "address": "One Arrowhead Drive",
+                    "capacity": 76416,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:8189",
+                    "location": {
+                        "lat": "39.049019",
+                        "lng": "-94.484140"
+                    }
+                },
+                "home": {
+                    "id": "6680d28d-d4d2-49f6-aace-5292d3ec02c2",
+                    "name": "Kansas City Chiefs",
+                    "alias": "KC",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4422"
+                },
+                "away": {
+                    "id": "7d4fcc64-9cb5-4d1b-8e75-8a906d1e1576",
+                    "name": "Las Vegas Raiders",
+                    "alias": "LV",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4390"
+                },
+                "broadcast": {
+                    "network": "CBS"
+                }
+            },
+            {
+                "id": "046cfa38-25a3-4cd0-aab2-5d3808194cfb",
+                "status": "scheduled",
+                "scheduled": "2023-12-25T21:30:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41192051",
+                "game_type": "regular",
+                "conference_game": true,
+                "venue": {
+                    "id": "4fa8c29c-6626-464c-8540-314ed7535e1b",
+                    "name": "Lincoln Financial Field",
+                    "city": "Philadelphia",
+                    "state": "PA",
+                    "country": "USA",
+                    "zip": "19148",
+                    "address": "1020 Pattison Avenue",
+                    "capacity": 69596,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:1833",
+                    "location": {
+                        "lat": "39.900872",
+                        "lng": "-75.167311"
+                    }
+                },
+                "home": {
+                    "id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80",
+                    "name": "Philadelphia Eagles",
+                    "alias": "PHI",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4428"
+                },
+                "away": {
+                    "id": "04aa1c9d-66da-489d-b16a-1dee3f2eec4d",
+                    "name": "New York Giants",
+                    "alias": "NYG",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4426"
+                },
+                "broadcast": {
+                    "network": "FOX"
+                }
+            },
+            {
+                "id": "0fc1e440-e670-4749-9ece-5cdc554fb42a",
+                "status": "scheduled",
+                "scheduled": "2023-12-26T01:15:00+00:00",
+                "entry_mode": "LDE",
+                "sr_id": "sr:match:41209621",
+                "game_type": "regular",
+                "conference_game": false,
+                "venue": {
+                    "id": "24c71dbf-6469-46f1-8165-22005c295c8f",
+                    "name": "Levi's Stadium",
+                    "city": "Santa Clara",
+                    "state": "CA",
+                    "country": "USA",
+                    "zip": "95054",
+                    "address": "4900 Marie P DeBartolo Way",
+                    "capacity": 68500,
+                    "surface": "turf",
+                    "roof_type": "outdoor",
+                    "sr_id": "sr:venue:15672",
+                    "location": {
+                        "lat": "37.403000",
+                        "lng": "-121.970000"
+                    }
+                },
+                "home": {
+                    "id": "f0e724b0-4cbf-495a-be47-013907608da9",
+                    "name": "San Francisco 49ers",
+                    "alias": "SF",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4389"
+                },
+                "away": {
+                    "id": "ebd87119-b331-4469-9ea6-d51fe3ce2f1c",
+                    "name": "Baltimore Ravens",
+                    "alias": "BAL",
+                    "game_number": 15,
+                    "sr_id": "sr:competitor:4413"
+                },
+                "broadcast": {
+                    "network": "ABC"
+                }
+            }
+        ]
+    },
+    "_comment": "Generation started @ 2023-12-23 21:59:24 UTC ended @ 2023-12-23 21:59:24 UTC"
+}

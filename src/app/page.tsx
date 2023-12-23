@@ -4,8 +4,8 @@ import { PlayerSection } from "@/components/playerSection";
 import { ABBREVIATION_TO_TEAM_NAME } from "@/constants";
 import {
   ALL_LEAGUES,
-  WEEK_15_MAPPINGS,
-  WEEK_15_TEAMS,
+  WEEK_16_MAPPINGS,
+  WEEK_16_TEAMS,
 } from "@/constants/sleeper";
 import { PlayerData } from "@/helpers/dataConversion";
 import {
@@ -81,16 +81,7 @@ export default function Home() {
   useEffect(() => {
     if (!playersData || !playerIdMap || !rawRosters || !rawUsers) return;
     const rosters = [];
-    console.log("starting conversion");
     const matchups: Matchup[] = [
-      {
-        home: undefined,
-        away: undefined,
-      },
-      {
-        home: undefined,
-        away: undefined,
-      },
       {
         home: undefined,
         away: undefined,
@@ -101,7 +92,7 @@ export default function Home() {
       },
     ];
     for (const roster of rawRosters) {
-      if (!WEEK_15_TEAMS.includes(roster.owner_id)) continue;
+      if (!WEEK_16_TEAMS.includes(roster.owner_id)) continue;
       let totalPoints = 0;
       const user = rawUsers.find((user) => user.user_id === roster.owner_id);
       const rosterData = {
@@ -146,15 +137,22 @@ export default function Home() {
         totalPoints: totalPoints.toFixed(2),
       };
       rosters.push(allData);
-      const rosterMatchupInfo = WEEK_15_MAPPINGS[roster.owner_id];
+      const rosterMatchupInfo = WEEK_16_MAPPINGS[roster.owner_id];
       matchups[rosterMatchupInfo.matchup][rosterMatchupInfo.team] = allData;
     }
-    console.log(matchups);
     setRosters(rosters);
     matchups.forEach((matchup) => {
+      const offset = calculateOffsetForMatchup(matchup.away!, matchup.home!);
+      const offsetText =
+        offset === 0
+          ? ""
+          : " (" + (offset > 0 ? "+" : "") + offset.toFixed(2) + ")";
+
+      matchup.away!.totalPointsWithOffset =
+        matchup.away?.totalPoints + offsetText;
+
       matchup.away!.totalPoints = (
-        parseFloat(matchup.away!.totalPoints) +
-        calculateOffsetForMatchup(matchup.away!, matchup.home!)
+        parseFloat(matchup.away!.totalPoints) + offset
       ).toFixed(2);
     });
     setMatchups(matchups);
@@ -194,7 +192,8 @@ export default function Home() {
               />
               <div>{matchups[matchupNumber].away?.teamName}</div>
               <div>
-                Total Points: {matchups[matchupNumber].away?.totalPoints}
+                Total Points:{" "}
+                {matchups[matchupNumber].away?.totalPointsWithOffset}
               </div>
               {matchups[matchupNumber].away?.starters.map(
                 (player: AllPlayerTypes) => (

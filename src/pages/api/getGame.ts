@@ -32,7 +32,7 @@ export const getGame = async (id: string): Promise<SRGameData> => {
 
     const result = await axios.get(url);
     const data = result.data;
-    if (data.status === "closed") {
+    if (data.status === "closed" && process.env.IS_VERCEL !== "true") {
       const filePath = path.join(process.cwd(), `src/data/${id}.json`);
       // Convert the data to a JSON string
       const jsonData = JSON.stringify(data, null, 2);

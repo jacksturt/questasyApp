@@ -17,6 +17,25 @@ export const WEEK_15_GAME_IDS = [
   "322508eb-5e6c-42d1-b91e-c08535bcf245",
 ];
 
+export const WEEK_16_GAME_IDS = [
+  "a5c8ad6c-fadd-4c57-89d3-c3166f20ff87",
+  "389ffb68-0764-4e36-81a3-fb23055c6c32",
+  // "fd64785d-5a73-4a12-8ca7-6ffe8233cf2b",
+  // "19a88df4-b884-496a-b581-078de5c163c7",
+  // "42375c35-091a-4e0b-9b8d-fe07ef05cdcd",
+  // "6d4d690d-a763-40c3-91e9-48d298018c9a",
+  // "945e166e-44da-4fb4-b3b3-575b0ca24e7c",
+  // "aed5b2ec-ff34-419b-b159-fabab8a6cc73",
+  // "c2dcdbbd-3de4-4b79-9b1c-401a21f7063e",
+  // "bf34bf3a-0af6-498f-b11e-10e789b18826",
+  // "2aaece03-c4c4-4c07-9835-3c523cec2925",
+  // "36659169-5373-4de0-80ca-06ac24c283a6",
+  // "7ad5a64d-1613-4dfe-bf15-59868304f1de",
+  // "ced4e00a-4097-4394-8541-091bd7e86498",
+  // "046cfa38-25a3-4cd0-aab2-5d3808194cfb",
+  // "0fc1e440-e670-4749-9ece-5cdc554fb42a",
+];
+
 export const ABBREVIATION_TO_TEAM_NAME: {
   [key: string]: { sportradar_id: string };
 } = {

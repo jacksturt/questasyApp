@@ -29,3 +29,20 @@ export const WEEK_15_MAPPINGS: Record<
   "1003141180391059456": { matchup: 3, team: "home" },
   "1003409657097990144": { matchup: 3, team: "away" },
 };
+
+export const WEEK_16_TEAMS: string[] = [
+  "719794343593963520",
+  "1003664384036634624",
+  "470291496407396352",
+  "1003409657097990144",
+];
+
+export const WEEK_16_MAPPINGS: Record<
+  string,
+  { matchup: number; team: "home" | "away" }
+> = {
+  "719794343593963520": { matchup: 0, team: "home" },
+  "1003664384036634624": { matchup: 0, team: "away" },
+  "470291496407396352": { matchup: 1, team: "home" },
+  "1003409657097990144": { matchup: 1, team: "away" },
+};
