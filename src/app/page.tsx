@@ -203,7 +203,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="text-[128px] ">VS</div>
+        <div className="text-sm md:text-[128px] ">VS</div>
         <div>
           {matchups && (
             <div>
