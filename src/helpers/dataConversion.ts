@@ -69,7 +69,7 @@ export const convertTeamStats = (teamStats: SRTeamFullStats): PlayerData => {
     };
     players[player.id] = {
       fumbles: player.fumbles,
-      fumblesLost: player.fumbles_lost,
+      fumblesLost: player.lost_fumbles,
       ...extraData,
     };
   }

@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import { WEEK_15_GAME_IDS, WEEK_16_GAME_IDS } from "@/constants";
+import { WEEK_16_GAME_IDS } from "@/constants";
 import { cacheFunctionWithTimeout } from "@/helpers/caching";
 import { delay } from "@/helpers/delay";
 const SPORTSRADAR_API_BASE =

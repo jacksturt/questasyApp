@@ -95,7 +95,7 @@ export type SRPlayerStats = {
   yards_after_contact: number;
   interceptions: number;
   fumbles: number;
-  fumbles_lost: number;
+  lost_fumbles: number;
   receptions: number;
   targets: number;
   blocked: number;
