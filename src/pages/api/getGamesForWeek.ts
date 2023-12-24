@@ -11,6 +11,7 @@ import path from "path";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { WEEK_15_GAME_IDS, WEEK_16_GAME_IDS } from "@/constants";
 import { cacheFunctionWithTimeout } from "@/helpers/caching";
+import { delay } from "@/helpers/delay";
 const SPORTSRADAR_API_BASE =
   "https://api.sportradar.us/nfl/official/trial/v7/en";
 const SPORTSRADAR_API_KEY = "atc9c9phveefwywzvukjs8u9";
@@ -33,6 +34,8 @@ export const getGame = async (id: string): Promise<SRGameData> => {
     const cachedFunction = cacheFunctionWithTimeout(getGameAPI, 60000); // Cache for 1 minute
 
     const data = await cachedFunction(id);
+    await delay(1000);
+
     // console.log(data);
     return data;
   }
@@ -60,16 +63,13 @@ export default async function handler(
 ) {
   try {
     let gamesData = {};
-    const getGamesMap = WEEK_16_GAME_IDS.map(async (game) => {
-      {
-        const data = await getGame(game);
-        const converted = convertGameStats(data);
-        gamesData = { ...gamesData, ...converted };
-      }
-    });
-    await Promise.all(getGamesMap);
+    for (const gameData of WEEK_16_GAME_IDS) {
+      const data = await getGame(gameData);
+      const converted = convertGameStats(data);
+      gamesData = { ...gamesData, ...converted };
+    }
     res.status(200).json(gamesData);
   } catch (error: any) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: "there was an error: " + error.message });
   }
 }
