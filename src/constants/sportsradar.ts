@@ -30,7 +30,7 @@ export const WEEK_16_GAME_IDS = [
   "bf34bf3a-0af6-498f-b11e-10e789b18826",
   "2aaece03-c4c4-4c07-9835-3c523cec2925",
   "36659169-5373-4de0-80ca-06ac24c283a6",
-  // "7ad5a64d-1613-4dfe-bf15-59868304f1de",
+  "7ad5a64d-1613-4dfe-bf15-59868304f1de",
   // "ced4e00a-4097-4394-8541-091bd7e86498",
   // "046cfa38-25a3-4cd0-aab2-5d3808194cfb",
   // "0fc1e440-e670-4749-9ece-5cdc554fb42a",

@@ -160,7 +160,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex gap-20">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-20 mb-10 md:mb-0">
         {matchups &&
           matchups.map((matchup, index) => (
             <button
@@ -170,16 +170,19 @@ export default function Home() {
                 setMatchupNumber(index);
               }}
             >
-              <div>
-                {matchup.away?.teamName} vs {matchup.home?.teamName}
+              <div className="flex flex-col md:flex-row md:gap-2">
+                <div>{matchup.away?.teamName}</div>
+                <div> vs </div>
+                <div>{matchup.home?.teamName}</div>
               </div>
+
               <div>
                 {matchup.away?.totalPoints} vs {matchup.home?.totalPoints}
               </div>
             </button>
           ))}
       </div>
-      <div className="flex gap-20 items-start justify-center">
+      <div className="flex gap-4 md:gap-20 items-start justify-center">
         <div>
           {matchups && (
             <div>
