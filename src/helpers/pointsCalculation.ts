@@ -57,8 +57,10 @@ export const getPointsForSkillPosition = (player: PlayerStats): number => {
   sum += (player.receivingTouchdowns || 0) * 6;
   sum += (player.interceptions || 0) * -2;
   sum += (player.fumblesLost || 0) * -2;
-  sum += (player.twoPointConversions || 0) * 2;
+  console.log("sumpre", sum);
 
+  sum += (player.twoPointConversions || 0) * 2;
+  console.log("sum", sum);
   return sum;
 };
 
