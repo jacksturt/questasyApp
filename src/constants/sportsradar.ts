@@ -33,7 +33,7 @@ export const WEEK_16_GAME_IDS = [
   "7ad5a64d-1613-4dfe-bf15-59868304f1de",
   "ced4e00a-4097-4394-8541-091bd7e86498",
    "046cfa38-25a3-4cd0-aab2-5d3808194cfb",
-  // "0fc1e440-e670-4749-9ece-5cdc554fb42a",
+  "0fc1e440-e670-4749-9ece-5cdc554fb42a",
 ];
 
 export const ABBREVIATION_TO_TEAM_NAME: {
