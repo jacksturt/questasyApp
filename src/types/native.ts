@@ -77,7 +77,7 @@ export type SleeperPlayer = {
   name: string;
   jerseyNumber: number;
   team: string;
-  points: number;
+  points?: number;
 };
 
 export type SleeperToSRMap = Record<string, SleeperPlayer>;

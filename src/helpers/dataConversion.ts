@@ -151,5 +151,3 @@ export const convertGameStats = (gameStats: SRGameData): PlayerData => {
   //   console.log(teams);
   return teams;
 };
-
-export const convertRosterInfo = (rosterInfo: SleeperRosterInfo) => {};

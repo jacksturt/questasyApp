@@ -6,6 +6,8 @@ import {
   ALL_LEAGUES,
   WEEK_16_MAPPINGS,
   WEEK_16_TEAMS,
+  WEEK_17_MAPPINGS,
+  WEEK_17_TEAMS,
 } from "@/constants/sleeper";
 import { PlayerData } from "@/helpers/dataConversion";
 import {
@@ -86,13 +88,9 @@ export default function Home() {
         home: undefined,
         away: undefined,
       },
-      {
-        home: undefined,
-        away: undefined,
-      },
     ];
     for (const roster of rawRosters) {
-      if (!WEEK_16_TEAMS.includes(roster.owner_id)) continue;
+      if (!WEEK_17_TEAMS.includes(roster.owner_id)) continue;
       let totalPoints = 0;
       const user = rawUsers.find((user) => user.user_id === roster.owner_id);
       const rosterData = {
@@ -102,11 +100,11 @@ export default function Home() {
         teamName: user?.metadata.team_name || "Team " + user?.display_name,
         avatar: "https://sleepercdn.com/avatars/thumbs/" + user?.avatar,
         starters: roster.starters.map((player) => {
+          // debugger;
           if (player === "0") {
             return {
               name: "Empty",
               position: "Empty",
-              points: 0,
               team: "Empty",
               jerseyNumber: -1,
               sportradar_id: "Empty",
@@ -116,6 +114,17 @@ export default function Home() {
           const playerInfo = playerIdMap[player];
           const playerData = playersData[playerInfo.sportradar_id];
           if (!playerData) {
+            if (Object.keys(ABBREVIATION_TO_TEAM_NAME).includes(player)) {
+              return {
+                name: playerInfo.sportradar_id + " Defense",
+                position: "DEF",
+                points: undefined,
+                team: playerInfo.sportradar_id,
+                jerseyNumber: -1,
+                sportradar_id: playerInfo.sportradar_id,
+                status: "Empty",
+              };
+            }
             return playerInfo;
           }
           const points = getPointsForPlayer(playerData);
@@ -137,7 +146,7 @@ export default function Home() {
         totalPoints: totalPoints.toFixed(2),
       };
       rosters.push(allData);
-      const rosterMatchupInfo = WEEK_16_MAPPINGS[roster.owner_id];
+      const rosterMatchupInfo = WEEK_17_MAPPINGS[roster.owner_id];
       matchups[rosterMatchupInfo.matchup][rosterMatchupInfo.team] = allData;
     }
     setRosters(rosters);

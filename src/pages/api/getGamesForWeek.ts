@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import { WEEK_16_GAME_IDS } from "@/constants";
+import { WEEK_16_GAME_IDS, WEEK_17_GAME_IDS } from "@/constants";
 import { cacheFunctionWithTimeout } from "@/helpers/caching";
 import { delay } from "@/helpers/delay";
 const SPORTSRADAR_API_BASE =
@@ -63,7 +63,7 @@ export default async function handler(
 ) {
   try {
     let gamesData = {};
-    for (const gameData of WEEK_16_GAME_IDS) {
+    for (const gameData of WEEK_17_GAME_IDS) {
       const data = await getGame(gameData);
       const converted = convertGameStats(data);
       gamesData = { ...gamesData, ...converted };

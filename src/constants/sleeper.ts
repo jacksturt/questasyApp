@@ -46,3 +46,16 @@ export const WEEK_16_MAPPINGS: Record<
   "470291496407396352": { matchup: 1, team: "home" },
   "1003409657097990144": { matchup: 1, team: "away" },
 };
+
+export const WEEK_17_MAPPINGS: Record<
+  string,
+  { matchup: number; team: "home" | "away" }
+> = {
+  "719794343593963520": { matchup: 0, team: "home" },
+  "1003409657097990144": { matchup: 0, team: "away" },
+};
+
+export const WEEK_17_TEAMS: string[] = [
+  "719794343593963520",
+  "1003409657097990144",
+];
