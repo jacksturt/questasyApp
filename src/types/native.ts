@@ -75,7 +75,7 @@ export type SleeperPlayer = {
   status?: string;
   position: string;
   name: string;
-  jerseyNumber: number;
+  jerseyNumber?: number;
   team: string;
   points?: number;
 };

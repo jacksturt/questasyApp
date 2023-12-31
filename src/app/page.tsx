@@ -120,9 +120,10 @@ export default function Home() {
                 position: "DEF",
                 points: undefined,
                 team: playerInfo.sportradar_id,
-                jerseyNumber: -1,
+                // jerseyNumber: -1,
                 sportradar_id: playerInfo.sportradar_id,
                 status: "Empty",
+                pointsAllowed: 0,
               };
             }
             return playerInfo;
